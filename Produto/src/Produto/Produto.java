@@ -1,4 +1,6 @@
-class Produto1{
+package Produto;
+
+public class Produto{
 	
 		//Atributos inseridos de forma privada.
 		private String produto;
@@ -8,7 +10,7 @@ class Produto1{
 		private double lucro;
 		
 		//Construtor.
-		public Produto1(String produto,String marca, double valorCompra, double valorVenda ) {
+		public Produto(String produto,String marca, double valorCompra, double valorVenda ) {
 			this.produto = produto;
 			this.marca = marca;
 			this.valorCompra = valorCompra;
@@ -17,6 +19,9 @@ class Produto1{
 		//Método para calculo de lucro.
 		private double lucro() {
 			return valorVenda - valorCompra;
+		}
+		private String produto() {
+			return produto;
 		}
 		
 		//Get para acessar os atributos privados.
@@ -37,19 +42,5 @@ class Produto1{
 			return lucro();
 		}
 }
-public class Produto {
 
-	public static void main(String[] args) {
-		//Instanciar o Mostrador do Produto
-		Produto1 p = new Produto1 ("Pão","Panco",2.5, 3.5);
-		
-		//Mostrando os métodos
-		System.out.println("Nome do produto: " + p.getProduto());
-		System.out.println("Marca do produto: " + p.getMarca());
-		System.out.println("Valor do produto:R$" + p.getValorCompra());
-		System.out.println("Valor de venda do produto:R$" +p.getValorVenda());
-		System.out.println("Lucro encima do produto: R$" +p.getLucro());
 
-	}
-
-}
